@@ -1,0 +1,37 @@
+{
+    "name": "electron-base-application",
+    "productName": "Electron Base Application",
+    "version": "1.0.0",
+    "description": "A base application for Electron Application",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "aebs build",
+        "clean": "aebs clean",
+        "asar": "aebs asar",
+        "sassy": "aebs sassy"
+    },
+    "keywords": [
+        "Electron",
+        "Application",
+        "Template"
+    ],
+    "author": "Jacob Radatz <jradatz@rwstudios.net>",
+    "license": "GPL-3.0-or-later",
+    "config": {
+        "company-name": "Company Here",
+        "legal-copyright": "Copyright (C) 2018, Company",
+        "icon": "./icon.png",
+        "identifier": "com.example.electron"
+    },
+    "dependencies": {
+        "bootstrap": "^4.1.3",
+        "jquery": "^3.3.1",
+        "jquery-electron-statusbar": "^1.0.0",
+        "popper.js": "^1.14.4"
+    },
+    "devDependencies": {
+        "electron": "^2.0.8",
+        "aebs": "^1.0.0"
+    }
+}

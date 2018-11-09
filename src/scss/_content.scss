@@ -1,0 +1,11 @@
+.content {
+    position: fixed;
+    top: $tb_height + $mb_height;
+    bottom: $footer_height;
+    left: 1px;
+    right: 1px;
+    overflow: scroll;
+    color: $text_color;
+    border-top: $content_separator_height solid $content_separator_color;
+    padding: 0 $content_padding;
+}

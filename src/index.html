@@ -1,0 +1,179 @@
+<!--
+    electron-base-project
+    Copyright (C) 2018 Jacob Radatz
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/jquery-electron-statusbar/jquery.statusbar.css">
+    <link rel="stylesheet" href="./css/main.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+	<div class="title-bar">
+        <div class="title-bar-title">Application Title Here</div>
+        <div class="title-bar-btns">
+            <button id="developer-btn">
+                <i class="material-icons">usb</i>
+            </button>
+            <button id="reload-btn">
+                <i class="material-icons">refresh</i>
+            </button>
+            <div class="title-bar-separator"></div>
+            <button id="min-btn">
+                <i class="material-icons">minimize</i>
+            </button>
+            <button id="max-btn">
+                <i class="material-icons">crop_square</i>
+            </button>
+            <button id="close-btn">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <div class="dropdown menu-bar-item">
+            <button class="dropdown-toggle menu-bar-btn" type="button" id="fileMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                File
+            </button>
+            <div class="dropdown-menu menu-bar-drop" aria-labelledby="fileMenu">
+                <a class="dropdown-item menu-bar-drop-item" id="menu_exit">Exit</a>
+            </div>
+        </div>
+        <div class="dropdown menu-bar-item">
+            <button class="dropdown-toggle menu-bar-btn" type="button" id="fileMenu" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Another Menu Item
+            </button>
+            <div class="dropdown-menu menu-bar-drop" aria-labelledby="fileMenu">
+                <a class="dropdown-item menu-bar-drop-item" id="menu_exit">Dropdown 1</a>
+                <a class="dropdown-item menu-bar-drop-item" id="menu_exit">Dropdown 2</a>
+                <div class="menu-bar-divider"></div>
+                <a class="dropdown-item menu-bar-drop-item" id="menu_exit">Dropdown 1</a>
+                <a class="dropdown-item menu-bar-drop-item" id="menu_exit">Dropdown 1</a>
+            </div>
+        </div>
+    </div>
+	<div class="content scroll scroll-x scroll-y">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend massa dui, lacinia lacinia mi facilisis sed.
+        Vivamus non erat metus. Aliquam vulputate diam eget ultrices eleifend. Etiam id enim velit. Nunc sollicitudin leo nec
+        porta lacinia. Aliquam sapien purus, vestibulum vel aliquam vel, venenatis nec felis. Sed pretium finibus leo, ut
+        consectetur libero sodales vitae. Etiam rutrum eu nulla et pellentesque. Nullam at elit a velit vehicula euismod.</p>
+        <p>Mauris vestibulum sodales imperdiet. Morbi metus turpis, dictum ut imperdiet vitae, feugiat a diam. Ut luctus placerat
+        lacus vel vehicula. Ut tempor tortor dignissim, maximus enim ac, sollicitudin elit. Maecenas scelerisque, tortor id
+        dignissim viverra, libero lacus semper mauris, at hendrerit leo nibh eget libero. Mauris efficitur erat tellus, eget
+        pharetra massa dignissim lacinia. Aenean eu luctus augue.</p>
+        <p>Nunc tellus nulla, rutrum at enim id, condimentum vestibulum ante. Vivamus feugiat semper lorem, vitae sollicitudin
+        sapien porttitor sed. Nam posuere, libero non tempor blandit, sapien justo mattis est, quis sagittis nibh odio eu
+        augue. Nulla dictum mattis leo non porttitor. Mauris mollis sed quam id imperdiet. Donec facilisis maximus diam ac
+        venenatis. Donec ornare sed odio et blandit. Pellentesque commodo tempus felis a vehicula. Cras mi est, scelerisque et
+        euismod pulvinar, fermentum iaculis tortor. Vivamus ultrices vulputate nulla ut sagittis.</p>
+        <p>Donec in malesuada ligula, sit amet mattis felis. Nulla pellentesque rutrum sapien. Vivamus vitae neque enim. Morbi sed
+        sapien sit amet felis egestas cursus in id mauris. Sed blandit neque quam, vel pharetra leo commodo quis. Duis id
+        commodo ipsum. In vulputate dolor bibendum orci volutpat vulputate. Donec id faucibus libero. Praesent non nisl porta,
+        gravida nibh nec, convallis dui. Nullam imperdiet nulla eu lacus volutpat, in iaculis ante lobortis. Fusce vel lobortis
+        mauris, vitae elementum orci.</p>
+        <p>Morbi cursus lectus semper, rutrum justo pretium, molestie risus. Aenean quis diam et mauris efficitur feugiat. Aliquam
+        turpis lectus, lacinia dictum ullamcorper ac, gravida vitae justo. Nam eget ex consequat, fringilla magna at, aliquet
+        lectus. Donec fringilla metus vel lorem ullamcorper, at hendrerit ligula pharetra. Nulla fermentum lacus libero, id
+        pulvinar dolor sodales eget. Nulla facilisi. Phasellus lacinia metus id tristique porta. Maecenas nec ligula et nunc
+        consequat accumsan. Suspendisse tincidunt vulputate mauris vel condimentum. Aenean massa dui, accumsan sed faucibus
+        non, blandit venenatis nunc.</p>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend massa dui, lacinia lacinia mi facilisis sed.
+        Vivamus non erat metus. Aliquam vulputate diam eget ultrices eleifend. Etiam id enim velit. Nunc sollicitudin leo nec
+        porta lacinia. Aliquam sapien purus, vestibulum vel aliquam vel, venenatis nec felis. Sed pretium finibus leo, ut
+        consectetur libero sodales vitae. Etiam rutrum eu nulla et pellentesque. Nullam at elit a velit vehicula euismod.</p>
+        <p>Mauris vestibulum sodales imperdiet. Morbi metus turpis, dictum ut imperdiet vitae, feugiat a diam. Ut luctus placerat
+        lacus vel vehicula. Ut tempor tortor dignissim, maximus enim ac, sollicitudin elit. Maecenas scelerisque, tortor id
+        dignissim viverra, libero lacus semper mauris, at hendrerit leo nibh eget libero. Mauris efficitur erat tellus, eget
+        pharetra massa dignissim lacinia. Aenean eu luctus augue.</p>
+        <p>Nunc tellus nulla, rutrum at enim id, condimentum vestibulum ante. Vivamus feugiat semper lorem, vitae sollicitudin
+        sapien porttitor sed. Nam posuere, libero non tempor blandit, sapien justo mattis est, quis sagittis nibh odio eu
+        augue. Nulla dictum mattis leo non porttitor. Mauris mollis sed quam id imperdiet. Donec facilisis maximus diam ac
+        venenatis. Donec ornare sed odio et blandit. Pellentesque commodo tempus felis a vehicula. Cras mi est, scelerisque et
+        euismod pulvinar, fermentum iaculis tortor. Vivamus ultrices vulputate nulla ut sagittis.</p>
+        <p>Donec in malesuada ligula, sit amet mattis felis. Nulla pellentesque rutrum sapien. Vivamus vitae neque enim. Morbi sed
+        sapien sit amet felis egestas cursus in id mauris. Sed blandit neque quam, vel pharetra leo commodo quis. Duis id
+        commodo ipsum. In vulputate dolor bibendum orci volutpat vulputate. Donec id faucibus libero. Praesent non nisl porta,
+        gravida nibh nec, convallis dui. Nullam imperdiet nulla eu lacus volutpat, in iaculis ante lobortis. Fusce vel lobortis
+        mauris, vitae elementum orci.</p>
+        <p>Morbi cursus lectus semper, rutrum justo pretium, molestie risus. Aenean quis diam et mauris efficitur feugiat. Aliquam
+        turpis lectus, lacinia dictum ullamcorper ac, gravida vitae justo. Nam eget ex consequat, fringilla magna at, aliquet
+        lectus. Donec fringilla metus vel lorem ullamcorper, at hendrerit ligula pharetra. Nulla fermentum lacus libero, id
+        pulvinar dolor sodales eget. Nulla facilisi. Phasellus lacinia metus id tristique porta. Maecenas nec ligula et nunc
+        consequat accumsan. Suspendisse tincidunt vulputate mauris vel condimentum. Aenean massa dui, accumsan sed faucibus
+        non, blandit venenatis nunc.</p>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend massa dui, lacinia lacinia mi facilisis sed.
+        Vivamus non erat metus. Aliquam vulputate diam eget ultrices eleifend. Etiam id enim velit. Nunc sollicitudin leo nec
+        porta lacinia. Aliquam sapien purus, vestibulum vel aliquam vel, venenatis nec felis. Sed pretium finibus leo, ut
+        consectetur libero sodales vitae. Etiam rutrum eu nulla et pellentesque. Nullam at elit a velit vehicula euismod.</p>
+        <p>Mauris vestibulum sodales imperdiet. Morbi metus turpis, dictum ut imperdiet vitae, feugiat a diam. Ut luctus placerat
+        lacus vel vehicula. Ut tempor tortor dignissim, maximus enim ac, sollicitudin elit. Maecenas scelerisque, tortor id
+        dignissim viverra, libero lacus semper mauris, at hendrerit leo nibh eget libero. Mauris efficitur erat tellus, eget
+        pharetra massa dignissim lacinia. Aenean eu luctus augue.</p>
+        <p>Nunc tellus nulla, rutrum at enim id, condimentum vestibulum ante. Vivamus feugiat semper lorem, vitae sollicitudin
+        sapien porttitor sed. Nam posuere, libero non tempor blandit, sapien justo mattis est, quis sagittis nibh odio eu
+        augue. Nulla dictum mattis leo non porttitor. Mauris mollis sed quam id imperdiet. Donec facilisis maximus diam ac
+        venenatis. Donec ornare sed odio et blandit. Pellentesque commodo tempus felis a vehicula. Cras mi est, scelerisque et
+        euismod pulvinar, fermentum iaculis tortor. Vivamus ultrices vulputate nulla ut sagittis.</p>
+        <p>Donec in malesuada ligula, sit amet mattis felis. Nulla pellentesque rutrum sapien. Vivamus vitae neque enim. Morbi sed
+        sapien sit amet felis egestas cursus in id mauris. Sed blandit neque quam, vel pharetra leo commodo quis. Duis id
+        commodo ipsum. In vulputate dolor bibendum orci volutpat vulputate. Donec id faucibus libero. Praesent non nisl porta,
+        gravida nibh nec, convallis dui. Nullam imperdiet nulla eu lacus volutpat, in iaculis ante lobortis. Fusce vel lobortis
+        mauris, vitae elementum orci.</p>
+        <p>Morbi cursus lectus semper, rutrum justo pretium, molestie risus. Aenean quis diam et mauris efficitur feugiat. Aliquam
+        turpis lectus, lacinia dictum ullamcorper ac, gravida vitae justo. Nam eget ex consequat, fringilla magna at, aliquet
+        lectus. Donec fringilla metus vel lorem ullamcorper, at hendrerit ligula pharetra. Nulla fermentum lacus libero, id
+        pulvinar dolor sodales eget. Nulla facilisi. Phasellus lacinia metus id tristique porta. Maecenas nec ligula et nunc
+        consequat accumsan. Suspendisse tincidunt vulputate mauris vel condimentum. Aenean massa dui, accumsan sed faucibus
+        non, blandit venenatis nunc.</p>
+	</div>
+	<div class="footer">
+    </div>
+	<script src="./js/electron-shim.js"></script>
+    <script src="./js/title-bar.js"></script>
+    <script>
+        $(document).ready(function(data){
+            //Initialize the statusbar on the footer
+            $(".footer").statusbar({
+                columns: 4,
+                alignment: ["LEFT", "CENTER", "CENTER", "RIGHT"]
+            });
+
+            //Set all four columns of the status bar to have a value
+            $(".footer").statusbar("set", {
+                column: 1,
+                text: "Column 1"
+            }).statusbar("set", {
+                column: 2,
+                text: "Column 2"
+            }).statusbar("set", {
+                column: 3,
+                text: "Column 3"
+            }).statusbar("set", {
+                column: 4,
+                text: "Column 4"
+            });
+        });
+    </script>
+  </body>
+</html>

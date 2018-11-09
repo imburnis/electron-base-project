@@ -1,0 +1,76 @@
+.title-bar {
+    -webkit-app-region: drag;
+    height: $tb_height;
+    padding: 0;
+    margin: 0;
+    color: $tb_text_color;
+    font-family: sans-serif;
+}
+
+.title-bar-title {
+    position: fixed;
+    top: 0;
+    left: ($tb_height / 2);
+    line-height: $tb_height;
+    font-size: ($tb_height * 0.4);
+}
+
+.title-bar-btns {
+    -webkit-app-region: no-drag;
+    background-color: $tb_background_color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $tb_height;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.title-bar-separator {
+    width: $tb_separator_width;
+    background-color: $tb_separator_color;
+    border: none;
+    height: 100%;
+    margin-top: 0;
+}
+
+.title-bar-btns button {
+    height: $tb_height;
+    width: $tb_height;
+    background-color: $tb_button_color;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    -webkit-tap-highlight-color: $tb_button_color;
+    color: $tb_text_color;
+    transition: background-color $tb_transition_duration, color $tb_transition_duration;
+}
+
+.title-bar-btns i {
+    line-height: $tb_height;
+    font-size: ($tb_height * 0.75);
+}
+
+.title-bar-btns button:hover {
+    background-color: $tb_button_hover;
+    color: $tb_text_highlight;
+}
+
+.title-bar-btns button:active {
+    background-color: $tb_button_press;
+    color: $tb_text_highlight;
+}
+
+#close-btn {
+    background-color: $tb_exit_color !important;
+}
+
+#close-btn:hover {
+    background-color: $tb_exit_hover !important;
+}
+
+#close-btn:active {
+    background-color: $tb_exit_press !important;
+}

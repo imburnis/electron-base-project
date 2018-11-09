@@ -1,0 +1,231 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  -khtml-user-select: none;
+  /* Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  user-select: none;
+}
+
+body {
+  background-color: #282828;
+  border: 1px solid #4CAF50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Remove chromes default button highlight */
+button:focus {
+  outline: 0;
+}
+
+.title-bar {
+  -webkit-app-region: drag;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  color: #ADADAD;
+  font-family: sans-serif;
+}
+
+.title-bar-title {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  line-height: 32px;
+  font-size: 12.8px;
+}
+
+.title-bar-btns {
+  -webkit-app-region: no-drag;
+  background-color: #282828;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.title-bar-separator {
+  width: 1px;
+  background-color: #3F3F41;
+  border: none;
+  height: 100%;
+  margin-top: 0;
+}
+
+.title-bar-btns button {
+  height: 32px;
+  width: 32px;
+  background-color: #282828;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  -webkit-tap-highlight-color: #282828;
+  color: #ADADAD;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.title-bar-btns i {
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.title-bar-btns button:hover {
+  background-color: #353535;
+  color: #FFFFFF;
+}
+
+.title-bar-btns button:active {
+  background-color: #1b1b1b;
+  color: #FFFFFF;
+}
+
+#close-btn {
+  background-color: transparent !important;
+}
+
+#close-btn:hover {
+  background-color: #9e0202 !important;
+}
+
+#close-btn:active {
+  background-color: #6c0202 !important;
+}
+
+.menu-bar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  background-color: #282828;
+}
+
+/* Bug fix because popper.js accidently shows the first
+ * menu translated 5 px to the right when it doesnt need to be
+*/
+.menu-bar .menu-bar-item:nth-child(1) .menu-bar-drop {
+  left: -5px !important;
+}
+
+.menu-bar-item {
+  flex-grow: 0;
+}
+
+.menu-bar-btn {
+  height: 100%;
+  background-color: #282828;
+  transition: background-color 0.25s;
+  border: none;
+  color: #FFF;
+}
+
+.menu-bar-btn:active {
+  background-color: #1b1b1b;
+}
+
+.menu-bar-btn:after {
+  content: none !important;
+}
+
+.menu-bar-btn[aria-expanded=true] {
+  background-color: #353535;
+}
+
+.menu-bar-drop {
+  margin-top: -2px !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #353535;
+  color: #FFF;
+  padding: 0;
+}
+
+.menu-bar-btn,
+.menu-bar-drop {
+  cursor: pointer !important;
+}
+
+.menu-bar-drop-item:hover {
+  background-color: #686868;
+}
+
+.menu-bar-divider {
+  border-top: 1px solid #686868;
+}
+
+.content {
+  position: fixed;
+  top: 56px;
+  bottom: 24px;
+  left: 1px;
+  right: 1px;
+  overflow: scroll;
+  color: #FFFFFF;
+  border-top: 1px solid #434343;
+  padding: 0 5px;
+}
+
+.footer {
+  height: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+
+.scroll {
+  overflow: hidden;
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: #505050;
+}
+
+.scroll::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+
+/*# sourceMappingURL=main.css.map */

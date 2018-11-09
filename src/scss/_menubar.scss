@@ -1,0 +1,60 @@
+.menu-bar {
+    height: $mb_height;
+    width: 100%;
+    display: flex;
+    background-color: $mb_background_color;
+}
+
+/* Bug fix because popper.js accidently shows the first
+ * menu translated 5 px to the right when it doesnt need to be
+*/
+
+.menu-bar .menu-bar-item:nth-child(1) .menu-bar-drop {
+    left: -5px !important;
+}
+
+.menu-bar-item {
+    flex-grow: 0;
+}
+
+.menu-bar-btn {
+    height: 100%;
+    background-color: $mb_button_color;
+    transition: background-color $mb_transition_duration;
+    border: none;
+    color: $mb_text_color;
+}
+
+.menu-bar-btn:active {
+    background-color: $mb_button_press;
+}
+
+.menu-bar-btn:after {
+    content: none !important;
+}
+
+.menu-bar-btn[aria-expanded=true] {
+    background-color: $mb_dropdown_color;
+}
+
+.menu-bar-drop {
+    margin-top: -2px !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: $mb_dropdown_color;
+    color: $mb_text_color;
+    padding: 0;
+}
+
+.menu-bar-btn,
+.menu-bar-drop {
+    cursor: pointer !important;
+}
+
+.menu-bar-drop-item:hover {
+    background-color: $mb_dropdown_hover;
+}
+
+.menu-bar-divider {
+    border-top: $mb_separator_height solid $mb_dropdown_separator;
+}

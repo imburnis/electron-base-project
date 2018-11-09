@@ -1,0 +1,6 @@
+node_modules
+build
+#ignore the main.css file because it should be
+# generated from the SCSS files using sass
+css/main.css
+css/main.css.map
