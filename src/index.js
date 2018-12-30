@@ -16,24 +16,30 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 \****************************************************************************/
 
-const electron = require('electron')
+const electron = require('electron');
 // Module to control application life.
-const app = electron.app
+const app = electron.app;
 // Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+const BrowserWindow = electron.BrowserWindow;
+// Module for working with native paths
+const path = require('path');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow;
 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    //The default width and height of the window
 	  width: 800,
-	  height: 600,
-	  title: "ImageSoft.JobRunner.Interface",
-	  frame: false,
-	  backgroundColor: "#2A2A2A"
+    height: 600,
+	  title: "Example Electron Application",
+    //Disable window framing so that we can create our own that blends with the app
+    frame: false,
+    //the default background color of the window before the page is loaded
+    backgroundColor: "#2A2A2A",
+    icon: path.join(__dirname, "icon.png")
   })
 
   // and load the index.html of the app.
